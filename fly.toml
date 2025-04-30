@@ -9,10 +9,6 @@ primary_region = "iad"  # Virginia (most stable)
   PORT = "3000"
   JUDGE0_AUTO_MIGRATE = "1"
 
-[mounts]
-  source = "judge0_data"
-  destination = "/data"  # Where Judge0 stores temp files
-
 [http_service]
   internal_port = 3000
   force_https = true
