@@ -3,6 +3,7 @@ primary_region = "iad"  # Virginia (most stable)
 
 [build]
   image = "judge0/judge0:1.13.0"
+  builder = "docker"
 
 [env]
   PORT = "3000"
@@ -13,6 +14,9 @@ primary_region = "iad"  # Virginia (most stable)
   internal_port = 3000
   force_https = true
   auto_stop_machines = false
+
+[deploy]
+  strategy = "immediate"
 
 [vm]
   memory = "1gb"
