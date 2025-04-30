@@ -2,13 +2,16 @@ app = "judge0-prod"
 primary_region = "iad"  # Virginia (most stable)
 
 [build]
-  image = "judge0/judge0:1.13.0"
+  image = "judge0/judge0:1.13.0-alpine"
   builder = "docker"
 
 [env]
   PORT = "3000"
   JUDGE0_AUTO_MIGRATE = "1"
-  
+
+[mounts]
+  source = "judge0_data"
+  destination = "/data"  # Where Judge0 stores temp files
 
 [http_service]
   internal_port = 3000
