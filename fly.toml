@@ -1,0 +1,3 @@
+[http_service]
+  force_https = true
+  auto_stop_machines = false  # Prevents premature shutdown
