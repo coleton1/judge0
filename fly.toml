@@ -2,7 +2,7 @@ app = "judge0-prod"
 primary_region = "iad"  # Virginia (most stable)
 
 [build]
-  image = "judge0/judge0:1.13.0-alpine"
+  image = "judge0/judge0:1.13.0"
   builder = "docker"
 
 [env]
