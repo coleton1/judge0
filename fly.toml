@@ -1,3 +1,14 @@
+app = "judge0-prod"
+primary_region = "iad"  # Virginia (most stable)
+
+[build]
+  image = "judge0/judge0:1.13.0"
+
+[env]
+  PORT = "3000"
+  JUDGE0_AUTO_MIGRATE = "1"
+  RAILS_ENV = "production"
+
 [http_service]
   internal_port = 3000
   force_https = true
@@ -6,3 +17,4 @@
 [vm]
   memory = "1gb"
   cpus = 1
+  kernel_args = ["panic=1"]  # Prevents silent failures
